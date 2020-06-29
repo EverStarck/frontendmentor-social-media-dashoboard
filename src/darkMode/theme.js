@@ -1,13 +1,13 @@
 export const lightTheme = {
-  body: '#e2e2e2',
-  text: '#363537',
-  toggleBorder: '#fff',
-  gradient: 'linear-gradient(#39598A, #79D7ED)',
+  body: 'hsl(225, 100%, 98%)',
+  text: 'var(--Very-Dark-Blue-Text)',
+  textColor: 'var(--Dark-Grayish-Blue-Text)',
+  cardBg: 'var(--Light-Grayish-Blue-Card-BG)',
 }
 
 export const darkTheme = {
-  body: 'hsl(230, 17%, 14%)',
-  text: 'hsl(0, 0%, 100%)',
-  toggleBorder: '#6B8096',
-  gradient: 'linear-gradient(#091236, #1E215D)',
+  body: 'hsl(232, 19%, 15%)',
+  text: 'var(--white)',
+  textColor: 'var(--Desaturated-Blue-Text)',
+  cardBg: 'var(--Dark-Desaturated-Blue-Card-BG)',
 }

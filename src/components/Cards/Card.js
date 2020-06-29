@@ -11,7 +11,11 @@ const CardFrame = styled.article`
   align-items: center;
   position: relative;
   overflow: hidden;
-  /* height: 300px; */
+  cursor: pointer;
+  background: ${({ theme }) => theme.cardBg};
+  &:hover {
+    filter : brightness(120%);
+  }
   .imgName {
     color: var(--Desaturated-Blue-Text);
     font-weight: 700;
@@ -20,25 +24,20 @@ const CardFrame = styled.article`
     justify-content: center;
     align-items: center;
     margin-top: 20px;
-    img {
-      display: inline-block;
-      width: 25px;
-      height: 25px;
-    }
     p {
       display: inline-block;
       margin-left: 10px;
+      color: ${({ theme }) => theme.textColor};
     }
   }
   .followersFrame {
     /* text-align: center; */
-    color: #fff;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     .followersNumber {
-      color: var(--white);
+      color: ${({ theme }) => theme.text};
       font-size: 5rem;
       font-weight: 700;
       margin: 0;
@@ -46,7 +45,7 @@ const CardFrame = styled.article`
     }
     p {
       display: block;
-      color: var(--Desaturated-Blue-Text);
+      color: ${({ theme }) => theme.textColor};
       letter-spacing: 5px;
     }
   }

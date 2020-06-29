@@ -7,10 +7,16 @@ const HeaderFrame = styled.header`
     height: 100%;
     /* background: red; */
     h1, h4 {
+      color: ${({ theme }) => theme.text};
       margin: 0;
     }
     h4 {
-      color: var(--Desaturated-Blue-Text);
+      color: ${({ theme }) => theme.textColor};
+    }
+    @media screen and (max-width: 420px) {
+      h1 {
+        font-size: 1.7rem;
+      }
     }
 `;
 

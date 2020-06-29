@@ -44,7 +44,7 @@ const Container = styled.main`
   /* background: green; */
 `;
 
-const GridFrame = styled.main`
+const GridFrame = styled.section`
   /* Size */
   height: 80vh;
   width: 80vw;
@@ -66,6 +66,7 @@ const GridFrame = styled.main`
   h2 {
     grid-area: textOverview;
     font-size: 1.7rem;
+    color: ${({ theme }) => theme.text};
   }
 
   /* Responsive */

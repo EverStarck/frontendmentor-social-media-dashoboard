@@ -3,15 +3,19 @@ import styled from "styled-components";
 
 const SmCardFrame = styled.article`
   grid-area: ${(props) => props.gridArea};
-  background: var(--Dark-Desaturated-Blue-Card-BG);
+  background: ${({ theme }) => theme.cardBg};
   border-radius: 10px;
   padding: 20px;
+  cursor: pointer;
+  &:hover {
+    filter : brightness(120%);
+  }
   .textAndIcon {
     display: flex;
     justify-content: space-between;
     align-items: center;
     p {
-        color: var(--Desaturated-Blue-Text);
+        color: ${({ theme }) => theme.textColor};
         font-weight: 700;
         margin: 0;
     }
@@ -24,6 +28,7 @@ const SmCardFrame = styled.article`
     p {
         font-size: 2rem;
         font-weight: 700;
+        color: ${({ theme }) => theme.text};
         /* margin-top: 0; */
     }
     .arrowAndPercentage {
