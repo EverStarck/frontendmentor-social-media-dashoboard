@@ -55,12 +55,6 @@ const GridFrame = styled.main`
   grid-template-columns: repeat(4, 1fr);
   /* grid-template-rows: .1fr auto .1fr auto auto; */
   grid-template-rows: auto 280px auto 120px 120px;
-  /* grid-template-areas: "headerText headerText blank buttonToggle"
-                       "cardFb cardTw cardIg cardYt"
-                       "textOverview 1 2 3"
-                       "smCardFb smCardFb smCardIg smCardIg"
-                       "smCardTw smCardTw smCardYt smCardYt"; */
-
   grid-template-areas:
     "headerText headerText headerText buttonToggle"
     "cardFb cardTw cardIg cardYt"
@@ -71,7 +65,70 @@ const GridFrame = styled.main`
   /* background: red; */
   h2 {
     grid-area: textOverview;
-    font-size: 2rem;
+    font-size: 1.7rem;
+  }
+
+  /* Responsive */
+  @media screen and (max-width: 1216px) {
+    /* Size */
+    height: 90vh;
+    width: 90vw;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto 280px 280px auto 120px 120px;
+    grid-template-areas:
+    "headerText headerText headerText buttonToggle"
+    "cardFb cardFb cardTw cardTw"
+    "cardIg cardIg cardYt cardYt"
+    "textOverview textOverview textOverview textOverview"
+    "smCardFb smCardFb2 smCardIg smCardIg2"
+    "smCardTw smCardTw2 smCardYt smCardYt2";
+  }
+
+  @media screen and (max-width: 818px) {
+    /* Size */
+    height: 90vh;
+    width: 90vw;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto 280px 280px auto 120px 120px 120px 120px 120px;
+    grid-template-areas:
+    "headerText headerText headerText buttonToggle"
+    "cardFb cardFb cardTw cardTw"
+    "cardIg cardIg cardYt cardYt"
+    "textOverview textOverview textOverview textOverview"
+    "smCardFb smCardFb smCardFb2 smCardFb2"
+    "smCardIg smCardIg smCardIg2 smCardIg2"
+    "smCardTw smCardTw smCardTw2 smCardTw2"
+    "smCardYt smCardYt smCardYt2 smCardYt2";
+  }
+
+  @media screen and (max-width: 540px) {
+    /* Size */
+    /* height: 90vh; */
+    width: 90vw;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto repeat(4, 250px) auto repeat(8,120px);
+    grid-template-areas:
+    "headerText"
+    "buttonToggle"
+    "cardFb"
+    "cardTw"
+    "cardIg"
+    "cardYt"
+    "textOverview"
+    "smCardFb"
+    "smCardFb2"
+    "smCardIg"
+    "smCardIg2"
+    "smCardTw"
+    "smCardTw2"
+    "smCardYt"
+    "smCardYt2";
   }
 `;
 
