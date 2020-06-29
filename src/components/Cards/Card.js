@@ -72,6 +72,10 @@ const CardFrame = styled.article`
     left: 0;
     top: 0;
   }
+  @media screen and (max-width:375px) {
+    padding: 10px 0;
+    margin: 10px 0;
+  }
 `;
 
 const Card = ({

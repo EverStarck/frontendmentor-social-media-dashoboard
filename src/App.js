@@ -113,7 +113,7 @@ const GridFrame = styled.section`
     display: grid;
     gap: 20px;
     grid-template-columns: 1fr;
-    grid-template-rows: auto auto repeat(4, 250px) auto repeat(8,120px);
+    grid-template-rows: auto auto repeat(4, 270px) auto repeat(8,140px);
     grid-template-areas:
     "headerText"
     "buttonToggle"

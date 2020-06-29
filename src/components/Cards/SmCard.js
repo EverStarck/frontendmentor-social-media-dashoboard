@@ -8,16 +8,16 @@ const SmCardFrame = styled.article`
   padding: 20px;
   cursor: pointer;
   &:hover {
-    filter : brightness(120%);
+    filter: brightness(120%);
   }
   .textAndIcon {
     display: flex;
     justify-content: space-between;
     align-items: center;
     p {
-        color: ${({ theme }) => theme.textColor};
-        font-weight: 700;
-        margin: 0;
+      color: ${({ theme }) => theme.textColor};
+      font-weight: 700;
+      margin: 0;
     }
   }
   .NumberAndArrow {
@@ -26,20 +26,23 @@ const SmCardFrame = styled.article`
     align-items: center;
     margin: 0;
     p {
-        font-size: 2rem;
-        font-weight: 700;
-        color: ${({ theme }) => theme.text};
-        /* margin-top: 0; */
+      font-size: 2rem;
+      font-weight: 700;
+      color: ${({ theme }) => theme.text};
+      /* margin-top: 0; */
     }
     .arrowAndPercentage {
-        display: flex;
-        align-items: center;
-        p {
-            color: ${(props) => props.colorArrow};
-            font-size: 1rem;
-            margin-left: 5px;
-        }
+      display: flex;
+      align-items: center;
+      p {
+        color: ${(props) => props.colorArrow};
+        font-size: 1rem;
+        margin-left: 5px;
+      }
     }
+  }
+  @media screen and (max-width: 375px) {
+    margin: 10px 0;
   }
 `;
 
@@ -50,13 +53,10 @@ const SmCard = ({
   numberText,
   arrowIcon,
   percentage,
-  colorArrow
+  colorArrow,
 }) => {
   return (
-    <SmCardFrame
-     gridArea={gridArea}
-     colorArrow={colorArrow}
-    >
+    <SmCardFrame gridArea={gridArea} colorArrow={colorArrow}>
       <div className="textAndIcon">
         <p>{actionText}</p>
         <img src={logoBrand} alt="" />
@@ -64,10 +64,10 @@ const SmCard = ({
       <div className="NumberAndArrow">
         <p>{numberText}</p>
         <div className="arrowAndPercentage">
-            <img src={arrowIcon} alt="" />
-            <p>
-              <small>{percentage}%</small>
-            </p>
+          <img src={arrowIcon} alt="" />
+          <p>
+            <small>{percentage}%</small>
+          </p>
         </div>
       </div>
     </SmCardFrame>
