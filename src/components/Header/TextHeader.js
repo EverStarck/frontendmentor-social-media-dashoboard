@@ -2,15 +2,26 @@ import React from 'react';
 import styled from 'styled-components';
 
 const HeaderFrame = styled.header`
-    grid-area: headerText;
+    grid-area: ${(props) => props.gridArea};
+    margin: 0;
+    height: 100%;
+    /* background: red; */
+    h1, h4 {
+      margin: 0;
+    }
+    h4 {
+      color: var(--Desaturated-Blue-Text);
+    }
 `;
 
-const TextHeader = () => {
+const TextHeader = ({textInfo,h4, gridArea}) => {
   return (
-    <HeaderFrame>
-      <h1>Social Media Dashboard</h1>
+    <HeaderFrame
+     gridArea={gridArea}
+    >
+      <h1>{textInfo}</h1>
       <br />
-      <h4>Total Followers: 23,004</h4>
+      <h4>{h4}</h4>
     </HeaderFrame>
   );
 };
